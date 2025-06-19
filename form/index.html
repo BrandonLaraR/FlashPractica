@@ -131,15 +131,15 @@
         }
 
         .setosa {
-            color: #e53e3e;
+            color: #3ee55a;
         }
 
         .versicolor {
-            color: #3182ce;
+            color: #1603ea;
         }
 
         .virginica {
-            color: #6b46c1;
+            color: #c146b1;
         }
 
     </style>
@@ -250,18 +250,23 @@
         }
 
         // Agregar botones de ejemplo
-        function addExampleButtons() {
-            const btnContainer = document.querySelector('.btn-container');
-            const exampleDiv = document.createElement('div');
-            exampleDiv.style.marginTop = '20px';
-            exampleDiv.innerHTML = `
-                <p style="margin-bottom: 10px; color: #666;">Ejemplos</p>
-                <button type="button" onclick="fillExample('setosa')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Setosa</button>
-                <button type="button" onclick="fillExample('versicolor')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Versicolor</button>
-                <button type="button" onclick="fillExample('virginica')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Virginica</button>
-            `;
-            btnContainer.appendChild(exampleDiv);
-        }
+       function addExampleButtons() {
+    const form = document.getElementById('irisForm');
+
+    const exampleDiv = document.createElement('div');
+    exampleDiv.style.textAlign = 'center';
+    exampleDiv.style.margin = '15px 0';
+    exampleDiv.innerHTML = `
+        <p style="margin-bottom: 10px; color: #666;">Ejemplos</p>
+        <button type="button" onclick="fillExample('setosa')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Setosa</button>
+        <button type="button" onclick="fillExample('versicolor')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Versicolor</button>
+        <button type="button" onclick="fillExample('virginica')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Virginica</button>
+    `;
+
+    // Insertar el bloque antes del formulario
+    form.parentElement.insertBefore(exampleDiv, form);
+}
+
 
         // Manejar envío del formulario
         form.addEventListener('submit', async function (e) {
