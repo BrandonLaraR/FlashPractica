@@ -229,39 +229,7 @@
         const loadingDiv = document.getElementById('loading');
         const predictBtn = document.getElementById('predictBtn');
 
-        // Ejemplos de datos para cada especie
-        const examples = {
-            setosa: [5.1, 3.5, 1.4, 0.2],
-            versicolor: [6.4, 3.2, 4.5, 1.5],
-            virginica: [6.3, 3.3, 6.0, 2.5]
-        };
-
-        // Función para llenar el formulario con ejemplos
-        function fillExample(species) {
-            const values = examples[species];
-            document.getElementById('sepal_length').value = values[0];
-            document.getElementById('sepal_width').value = values[1];
-            document.getElementById('petal_length').value = values[2];
-            document.getElementById('petal_width').value = values[3];
-        }
-
-        // Agregar botones de ejemplo
-       function addExampleButtons() {
-    const form = document.getElementById('irisForm');
-
-    const exampleDiv = document.createElement('div');
-    exampleDiv.style.textAlign = 'center';
-    exampleDiv.style.margin = '15px 0';
-    exampleDiv.innerHTML = `
-        <p style="margin-bottom: 10px; color: #666;">Ejemplos</p>
-        <button type="button" onclick="fillExample('setosa')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Setosa</button>
-        <button type="button" onclick="fillExample('versicolor')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Versicolor</button>
-        <button type="button" onclick="fillExample('virginica')" style="margin: 5px; padding: 8px 15px; font-size: 0.9em;">Virginica</button>
-    `;
-
-    // Insertar el bloque antes del formulario
-    form.parentElement.insertBefore(exampleDiv, form);
-}
+       
 
 
         // Manejar envío del formulario
