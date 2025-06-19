@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 # Configurar CORS para permitir solicitudes desde el frontend
-CORS(app, resources={r"/*": {"origins": "https://iris-form.onrender.com"}})
+CORS(app, resources={r"/*": {"origins": "https://formulario-prueba-tzhl.onrender.com"}})
 # Cargar el modelo y componentes al iniciar la aplicación
 try:
     model = joblib.load('./iris_model.pkl')

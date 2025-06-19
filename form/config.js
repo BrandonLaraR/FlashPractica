@@ -43,7 +43,7 @@ class ConfigLoader {
 
     setDefaults() {
         this.config = {
-            API_URL: 'https://flask1-u3d5.onrender.com',
+            API_URL: 'https://flashpractica.onrender.com',
             DEBUG: 'false',
         };
     }
@@ -53,7 +53,7 @@ class ConfigLoader {
     }
 
     getApiUrl() {
-        return this.get('API_URL', 'https://flask1-u3d5.onrender.com');
+        return this.get('API_URL', 'https://flashpractica.onrender.com');
     }
 
     isDebug() {
